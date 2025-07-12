@@ -40,18 +40,21 @@ class MyApp extends StatelessWidget {
       ]
     );
 
-    var appBody = SingleChildScrollView(    // 滾動式頁面
-      padding: EdgeInsets.fromLTRB(25, 20, 25, 20),  // 設定頁面間距（左，上，右，下）
-      child: Column (
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          postHeader,
-          const SizedBox(height: 5),
-          PostWidget(),
-          const SizedBox(height: 10),
-          img1,
-        ],
-      )
+    var appBody = Scaffold(
+      backgroundColor: Color(0xFFEDEBF6),
+      body: SingleChildScrollView(    // 滾動式頁面
+          padding: EdgeInsets.fromLTRB(25, 20, 25, 20),  // 設定頁面間距（左，上，右，下）
+          child: Column (
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              postHeader,
+              const SizedBox(height: 5),
+              PostWidget(),
+              const SizedBox(height: 10),
+              img1,
+            ],
+          ),
+      ),
     );
 
     var appBar = AppBar(
